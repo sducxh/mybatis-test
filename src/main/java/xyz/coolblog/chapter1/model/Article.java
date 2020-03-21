@@ -3,6 +3,7 @@ package xyz.coolblog.chapter1.model;
 import java.io.Serializable;
 import java.util.Date;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.type.Alias;
 
 /**
  * Article

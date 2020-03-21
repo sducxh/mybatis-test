@@ -3,6 +3,7 @@ package xyz.coolblog.chapter1;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -36,8 +37,7 @@ public class MyBatisTest {
         try {
             ArticleDao articleDao = session.getMapper(ArticleDao.class);
             List<Article> articles = articleDao.
-                findByAuthorAndCreateTime("coolblog.xyz", "2018-06-10");
-
+                    findByAuthor("coolblog.xyz");
         } finally {
             session.commit();
             session.close();

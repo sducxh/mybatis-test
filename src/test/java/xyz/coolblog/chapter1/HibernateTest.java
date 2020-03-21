@@ -46,7 +46,7 @@ public class HibernateTest {
         Session session = null;
         try {
             session = buildSessionFactory.openSession();
-            int id = 6;
+            int id = 1;
             Article article = session.get(Article.class, id);
             System.out.println("ORM Query Result: ");
             System.out.println(article);

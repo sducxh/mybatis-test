@@ -23,6 +23,17 @@
 # Dump of table article
 # ------------------------------------------------------------
 
+DROP TABLE IF EXISTS `blog_article`;
+
+CREATE TABLE `blog_article` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(32) DEFAULT NULL,
+  `author` varchar(100) NOT NULL,
+  `content` text,
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 DROP TABLE IF EXISTS `article`;
 
 CREATE TABLE `article` (
